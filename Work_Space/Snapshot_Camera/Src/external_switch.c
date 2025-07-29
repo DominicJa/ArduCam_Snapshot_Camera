@@ -1,0 +1,19 @@
+#include "stm32f4xx.h"
+#include "external_switch.h"
+
+#define GPIOBEN		(1U<<1)
+
+
+/*Function used for initialing GPIOB pins for external switches*/
+void gpiob_switch_init(void)
+{
+	/*Enable clock access for GPIOB*/
+	RCC->AHB1ENR |= GPIOBEN;
+
+	/*Set PB4, PB5, PB14, and PB15 as inputs*/
+	GPIOB->MODER &= ~(3U<<8);
+	//GPIOB->MODER &= ~(3U<<10);
+	//GPIOB->MODER &= ~(3U<<28);
+	//GPIOB->MODER &= ~(3U<<30);
+
+}
