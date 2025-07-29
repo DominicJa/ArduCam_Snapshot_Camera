@@ -1,0 +1,16 @@
+Timer:
+-Going to use TIMER2 for PWM
+-I believe that TIMER2, TIMER3, TIMER4, TIMER5 can all be used for pwm
+-Going to use PA0 and PA1 pins for pwm. These pins correlate with TIM2_CH1 and TIM2_CH2 i their alternate function modes.
+-TIM2 can handle both servos because CH1 and CH2 can be controlled independently aka set a different duty cycle on each of the channels.
+-Each servo' position can be update independently by changing only CCR1 or CCR2 regs.
+
+GPIO:
+-GPIO port B will be used for the external push buttons. Becase TIM2_CH1 and TIM2_CH2 is on port A (Just feel like it)
+-I will need to use 4 pins for the external push buttons.
+-I will use PB4, PB5, PB14, PB15
+-PB4 will be for panning left. PB5 will be for panning right. PB14 will be for tilting down. PB15 will be for tilting up.
+-These pins will be made input of course
+
+Switches:
+-I think I'm going to use a 
