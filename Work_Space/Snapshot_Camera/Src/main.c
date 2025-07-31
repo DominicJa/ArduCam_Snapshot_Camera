@@ -23,9 +23,8 @@ int main(void)
     /* Loop forever */
 	while(1){
 		pl_switch = (GPIOB->IDR & PB4_PIN);
-		//pr_switch = (GPIOB->IDR & PB5_PIN);
-		//td_switch = (GPIOB->IDR & PB14_PIN);
-		//tu_switch = (GPIOB->IDR & PB15_PIN);
-		do_nothing();
+		pr_switch = (GPIOB->IDR & PB5_PIN);
+		td_switch = (GPIOB->IDR & PB14_PIN);
+		tu_switch = (GPIOB->IDR & PB15_PIN);
 	}
 }

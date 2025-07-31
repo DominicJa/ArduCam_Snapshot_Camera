@@ -1,0 +1,15 @@
+#include "exti.h"
+
+
+
+
+
+void pbpin_exti_init(void)
+{
+	/*Disable global interrupts*/
+	_disable_irq();
+
+	/*Enable block access for GPIOB*/
+	RCC->AHB1
+}
+

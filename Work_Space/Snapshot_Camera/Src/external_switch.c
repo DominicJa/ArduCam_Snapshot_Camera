@@ -12,8 +12,8 @@ void gpiob_switch_init(void)
 
 	/*Set PB4, PB5, PB14, and PB15 as inputs*/
 	GPIOB->MODER &= ~(3U<<8);
-	//GPIOB->MODER &= ~(3U<<10);
-	//GPIOB->MODER &= ~(3U<<28);
-	//GPIOB->MODER &= ~(3U<<30);
+	GPIOB->MODER &= ~(3U<<10);
+	GPIOB->MODER &= ~(3U<<28);
+	GPIOB->MODER &= ~(3U<<30);
 
 }

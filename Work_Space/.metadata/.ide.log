@@ -497,3 +497,11 @@
 2025-07-29 00:42:57,023 [INFO] ApiDb:280 - User favorites MCUs=[]
 2025-07-29 00:42:57,024 [INFO] ApiDb:276 - Save user favorites file C:\Users\domin/.stm32cubeide/favorites.boards.txt: 0 item(s)
 2025-07-29 00:42:57,024 [INFO] ApiDb:280 - User favorites Boards=[]
+2025-07-29 15:24:22,066 [INFO] Activator:177 - 
+
+
+2025-07-29 15:24:22,068 [INFO] Activator:178 - !SESSION log4j initialized
+2025-07-30 19:38:39,967 [INFO] Activator:177 - 
+
+
+2025-07-30 19:38:39,968 [INFO] Activator:178 - !SESSION log4j initialized

@@ -1,0 +1,21 @@
+#include "exti.h"
+
+
+#define GPIOBEN		(1U<<1)
+
+
+void pbpin_exti_init(void)
+{
+	/*Disable global interrupts*/
+	_disable_irq();
+
+	/*Enable block access for GPIOB*/
+	RCC->AHB1ENR |= GPIOBEN;
+
+	/*Set PB4, PB5, PB14, PB15 as input*/
+	GPIOB->MODER &= ~(3U<<8);
+	GPIOB->MODER &= ~(3U<<10);
+	GPIOB->MODER &= ~(3U<<28);
+	GPIOB->MODER &= ~(3U<<30);
+}
+
