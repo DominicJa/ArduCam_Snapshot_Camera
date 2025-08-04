@@ -37,7 +37,6 @@ int main(void)
 //Keeping the CPU in a busy-wait loop inside an ISR mean other interrupts could be delayed.
 //You can lose responsiveness in real-time applications.
 //Bad use of CPU time
-//I want to move on but this is good for learning and writing the best code I can.
 //Add above notes to notes file
 
 void EXTI4_IRQHandler(void)
