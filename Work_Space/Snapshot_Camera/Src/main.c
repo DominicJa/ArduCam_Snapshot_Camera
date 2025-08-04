@@ -1,5 +1,9 @@
 #include "stm32f4xx.h"
+#include "uart.h"
 #include "external_switch.h"
+#include "exti.h"
+#include <stdio.h>
+
 
 #define PB4_PIN		(1U<<4)
 #define PB5_PIN		(1U<<5)
@@ -11,20 +15,59 @@ int pr_switch = 0;
 int td_switch = 0;
 int tu_switch = 0;
 
-void do_nothing()
-{
-
-}
 
 int main(void)
 {
 	gpiob_switch_init();
+	pbpins_exti_init();
+	usart2_tx_init();
 
-    /* Loop forever */
 	while(1){
-		pl_switch = (GPIOB->IDR & PB4_PIN);
-		pr_switch = (GPIOB->IDR & PB5_PIN);
-		td_switch = (GPIOB->IDR & PB14_PIN);
-		tu_switch = (GPIOB->IDR & PB15_PIN);
+//		pl_switch = (GPIOB->IDR & PB4_PIN);
+//		pr_switch = (GPIOB->IDR & PB5_PIN);
+//		td_switch = (GPIOB->IDR & PB14_PIN);
+//		tu_switch = (GPIOB->IDR & PB15_PIN);
+	}
+}
+
+/*Interrupts work but switches need debouncing*/
+//TODO: Implement delays using timer to fix bouncing switches. (Add at beginning of handler)
+
+void EXTI4_IRQHandler(void)
+{
+	/*Clear PR flag*/
+	EXTI->PR |= LINE4;
+
+	//Do something...
+	printf("Pan Left...\n\r");
+}
+
+void EXTI9_5_IRQHandler(void)
+{
+	if((EXTI->PR & LINE5) != 0){
+		/*Clear PR flag*/
+		EXTI->PR |= LINE5;
+
+		//Do something...
+		printf("Pan Right...\n\r");
+	}
+}
+
+void EXTI15_10_IRQHandler(void)
+{
+	if((EXTI->PR & LINE14) != 0){
+		/*Clear PR flag*/
+		EXTI->PR |= LINE14;
+
+		//Do something...
+		printf("Tilt Down...\n\r");
+	}
+
+	if((EXTI->PR & LINE15) != 0){
+		/*Clear PR flag*/
+		EXTI->PR |= LINE15;
+
+		//Do something...
+		printf("Tilt Up...\n\r");
 	}
 }

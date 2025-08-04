@@ -10,6 +10,11 @@
 
 #include "stm32f4xx.h"
 
-void pbpins_exti_init(void)
+void pbpins_exti_init(void);
+
+#define LINE4		(1U<<4)
+#define LINE5		(1U<<5)
+#define LINE14		(1U<<14)
+#define LINE15		(1U<<15)
 
 #endif /* EXTI_H_ */

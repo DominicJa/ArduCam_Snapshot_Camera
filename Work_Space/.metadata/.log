@@ -71,3 +71,41 @@ C Model Exception: C Model Status [Element exti.h does not exist.]
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
 !SUBENTRY 1 org.eclipse.cdt.core 4 969 2025-07-30 20:47:20.826
 !MESSAGE Element exti.h does not exist.
+!SESSION 2025-08-03 19:41:15.266 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-08-03 19:41:51.984
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-08-03 19:41:52.065
+!MESSAGE Log4j initialized with config file C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-08-03 19:41:59.202
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-08-03 19:42:00.751
+!MESSAGE Indexed 'Snapshot_Camera' (5 sources, 64 headers) in 1.41 sec: 3,264 declarations; 5,349 references; 0 unresolved inclusions; 2 syntax errors; 3 unresolved names (0.035%)
+!SESSION 2025-08-03 21:35:05.466 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-08-03 21:35:12.888
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-08-03 21:35:12.926
+!MESSAGE Log4j initialized with config file C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-08-03 21:35:19.030
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-08-03 21:35:19.977
+!MESSAGE Indexed 'Snapshot_Camera' (6 sources, 65 headers) in 0.909 sec: 3,301 declarations; 5,671 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)

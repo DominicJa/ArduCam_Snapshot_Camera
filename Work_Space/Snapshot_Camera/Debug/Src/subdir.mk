@@ -6,21 +6,27 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/external_switch.c \
+../Src/exti.c \
 ../Src/main.c \
 ../Src/syscalls.c \
-../Src/sysmem.c 
+../Src/sysmem.c \
+../Src/uart.c 
 
 OBJS += \
 ./Src/external_switch.o \
+./Src/exti.o \
 ./Src/main.o \
 ./Src/syscalls.o \
-./Src/sysmem.o 
+./Src/sysmem.o \
+./Src/uart.o 
 
 C_DEPS += \
 ./Src/external_switch.d \
+./Src/exti.d \
 ./Src/main.d \
 ./Src/syscalls.d \
-./Src/sysmem.d 
+./Src/sysmem.d \
+./Src/uart.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

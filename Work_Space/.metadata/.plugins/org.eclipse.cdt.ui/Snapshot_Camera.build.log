@@ -1,10 +1,10 @@
-20:05:54 **** Incremental Build of configuration Debug for project Snapshot_Camera ****
+21:38:12 **** Incremental Build of configuration Debug for project Snapshot_Camera ****
 make -j16 all 
 arm-none-eabi-size   Snapshot_Camera.elf 
    text	   data	    bss	    dec	    hex	filename
-    860	      8	   1584	   2452	    994	Snapshot_Camera.elf
+   6084	    108	   1596	   7788	   1e6c	Snapshot_Camera.elf
 Finished building: default.size.stdout
  
 
-20:05:54 Build Finished. 0 errors, 0 warnings. (took 154ms)
+21:38:12 Build Finished. 0 errors, 0 warnings. (took 168ms)
 
