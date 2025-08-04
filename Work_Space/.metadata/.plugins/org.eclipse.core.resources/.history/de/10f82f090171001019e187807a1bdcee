@@ -32,12 +32,7 @@ int main(void)
 }
 
 /*Interrupts work but switches need debouncing*/
-//TODO: Implement delays using timer to fix bouncing switches. (Add debouncing without doing delays inside the ISRs)
-//Adding delays inside ISR is not good practice. ISRs should be as short and fast as possible.
-//Keeping the CPU in a busy-wait loop inside an ISR mean other interrupts could be delayed.
-//You can lose responsiveness in real-time applications.
-//Bad use of CPU time
-//Add above notes to notes file
+//TODO: Implement delays using timer to fix bouncing switches. (Add at beginning of handler)
 
 void EXTI4_IRQHandler(void)
 {
