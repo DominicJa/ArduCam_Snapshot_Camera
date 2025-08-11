@@ -10,6 +10,7 @@ C_SRCS += \
 ../Src/main.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
+../Src/tim.c \
 ../Src/uart.c 
 
 OBJS += \
@@ -18,6 +19,7 @@ OBJS += \
 ./Src/main.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
+./Src/tim.o \
 ./Src/uart.o 
 
 C_DEPS += \
@@ -26,6 +28,7 @@ C_DEPS += \
 ./Src/main.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
+./Src/tim.d \
 ./Src/uart.d 
 
 

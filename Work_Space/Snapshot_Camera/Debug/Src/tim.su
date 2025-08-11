@@ -1,0 +1,4 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+tim.c:15:6:tim3_ms_delay	24	static
+tim.c:48:6:tim3_debounce_init	8	static
+tim.c:69:6:tim3_start	4	static

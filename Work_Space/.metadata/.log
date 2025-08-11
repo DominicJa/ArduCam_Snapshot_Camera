@@ -109,3 +109,60 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-08-03 21:35:19.977
 !MESSAGE Indexed 'Snapshot_Camera' (6 sources, 65 headers) in 0.909 sec: 3,301 declarations; 5,671 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
+!SESSION 2025-08-04 16:57:23.017 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-08-04 16:57:39.914
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-08-04 16:57:39.985
+!MESSAGE Log4j initialized with config file C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-08-04 16:57:47.594
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-08-04 16:57:49.651
+!MESSAGE Indexed 'Snapshot_Camera' (7 sources, 68 headers) in 1.92 sec: 3,454 declarations; 5,866 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.021%)
+!SESSION 2025-08-06 11:20:42.518 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-08-06 11:20:58.656
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-08-06 11:20:58.726
+!MESSAGE Log4j initialized with config file C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-08-06 11:21:06.749
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-08-06 11:21:08.468
+!MESSAGE Indexed 'Snapshot_Camera' (7 sources, 68 headers) in 1.56 sec: 3,461 declarations; 6,046 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.021%)
+!SESSION 2025-08-10 19:52:48.116 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\Snapshot_Camera\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-08-10 19:53:04.859
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-08-10 19:53:04.924
+!MESSAGE Log4j initialized with config file C:\Users\domin\Desktop\Embedded_Projects\ArduCam_Snapshot_Camera\Work_Space\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-08-10 19:53:12.221
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-08-10 19:53:13.918
+!MESSAGE Indexed 'Snapshot_Camera' (7 sources, 68 headers) in 1.55 sec: 3,461 declarations; 6,046 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.021%)
