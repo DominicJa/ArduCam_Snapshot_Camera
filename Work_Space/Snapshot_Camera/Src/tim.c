@@ -9,6 +9,14 @@
 #define DIER_UIE	(1U<<0)
 
 #define GPIOAEN		(1U<<0)
+#define CCMR1_OC1M_PWM	(6U<<4)
+#define CCMR1_OC2M_PWM	(6U<<12)
+#define CCER_CC1E	(1U<<0)
+#define CCER_CC2E	(1U<<4)
+#define CCMR1_OC1PE	(1U<<3)
+#define CCMR1_OC2PE	(1U<<11)
+#define ARPE		(1U<<7)
+#define TIM2_CEN	(1U<<0)
 
 
 //This is a blocking function. I want to try to make something better.
@@ -80,23 +88,58 @@ void tim3_start(void)
 }
 
 
-//This function will be used to set up pwm for
-//void tim2_pwm(void)
-//{
-//	/*Enable clock access to GPIOA*/
-//	RCC->AHB1ENR |= GPIOAEN;
-//
-//	/*Set PA0 & PA1 mode to alternate function*/
-//	GPIOA->MODER &= ~(3U<<0);
-//	GPIOA->MODER |= (1U<<1);
-//
-//	GPIOA->MODER &= ~(3U<<2);
-//	GPIOA->MODER |= (1U<<3);
-//
-//	/*Set PA0 & PA1 alternate function type to TIM2_CH1 (AF1) & TIM2_CH2 (AF1)*/
-//
-//
-//	/*Enable clock access to timer2*/
-//		RCC->APB1ENR |= TIM2EN;
-//}
+//This function will be used to set up pwm for timer2 50hz
+void tim2_pwm_init(void)
+{
+	/*Enable clock access to GPIOA*/
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/*Set PA0 & PA1 mode to alternate function*/
+	GPIOA->MODER &= ~(3U<<0);
+	GPIOA->MODER |= (2U<<0);
+
+	GPIOA->MODER &= ~(3U<<2);
+	GPIOA->MODER |= (2U<<2);
+
+	/*Set PA0 & PA1 alternate function type to TIM2_CH1 (AF1) & TIM2_CH2 (AF1)*/
+	GPIOA->AFR[0] &= ~(0xF<<0);
+	GPIOA->AFR[0] |= (1U<<0);
+
+	GPIOA->AFR[0] &= ~(0xF<<4);
+	GPIOA->AFR[0] |= (1U<<4);
+
+	/*Enable clock access to timer2*/
+	RCC->APB1ENR |= TIM2EN;
+
+	/*Set prescaler value & auto reload value for 50hz*/
+	TIM2->PSC = 16 - 1; // 16 000 000 / 16 = 1 000 000
+	TIM2->ARR = 20000 - 1; // 20 000 / 1 000 000 = 0.02 = 20ms
+
+	/*Set PWM for output compare 1 mode & output compare 2 mode*/
+	//This is setting pwm for ch1 and ch2 of timer2
+	TIM2->CCMR1 &= ~((7U<<4) | (7U<<12)); // Clear OC1M and OC2M
+	TIM2->CCMR1 |= CCMR1_OC1M_PWM | CCMR1_OC2M_PWM;
+
+	/*Enable preload register (OCxPE)*/
+	TIM2->CCMR1 |= CCMR1_OC1PE;
+	TIM2->CCMR1 |= CCMR1_OC2PE;
+
+	/*Set inital duty cycle to 1.5ms for ch1 & 2ms for ch2 (neutral position 90 degrees)*/
+	//range is from 1ms to 2ms apparently. Should check datasheet though to see for sure.
+	TIM2->CCR1 = 1500; // 1 500 / 1 000 000 = 0.0015 = 1.5ms
+	TIM2->CCR2 = 2000; // 2 000 / 1 000 000 = 0.002 = 2.0ms
+
+	/*Enable the auto-reload preload register*/
+	TIM2->CR1 |= ARPE;
+
+	TIM2->EGR = 1; // Force update to apply ARR/CCR immediately
+
+	/*Enable tim2 ch1 & tim2 ch2 in compare mode */
+	TIM2->CCER |= CCER_CC1E;
+	TIM2->CCER |= CCER_CC2E;
+
+	/*Enable Counter*/
+	TIM2->CR1 |= TIM2_CEN;
+
+}
 
